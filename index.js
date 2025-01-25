@@ -51,11 +51,13 @@ async function askQuestion(pdfText, question) {
                     
                     Format your responses in a natural, conversational way while being specific and direct.
                     Focus on answering exactly what was asked without adding unnecessary information.
+                    limit your responses to the information provided in the resume.
+                    Don't provide any info other than resume related information. like coding question,general lnowledge question or maths question etc  or any other question.
                     If information is not available in the resume, clearly state that the specific detail isn't mentioned.`
                 },
                 {
                     role: "user",
-                    content: `PDF Content:\n${pdfText.slice(0, 3000)}\n\nQuestion: ${question}`
+                    content: `PDF Content:\n${pdfText.slice(0, 9000)}\n\nQuestion: ${question}`
                 }
             ],
             max_tokens: 150,
